@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('title', 100);
             $table->text('text', 100);
             $table->float('rating',2, 1);
-            $$table->foreingId('bootcamp_id')->constrained();
-            $$table->foreingId('user_id')->constrained();
-            $table->timestamp();
+            $table->foreignId('bootcamp_id')->constrained();
+            $table->foreignId('user_id')->constrained();
+            $table->timestamps();
         });
     }
 

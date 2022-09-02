@@ -19,10 +19,10 @@ return new class extends Migration
             $table->text('description');
             $table->string('website',70);
             $table->string('phone',30);
-            $table->string('average_rating', 2, 1);
-            $table->string('average_cost', 8, 2);
-            $table->foreingId('user_id')->constrained();
-            $table->timestamp();
+            $table->float('average_rating', 2, 1);
+            $table->float('average_cost', 8, 2);
+            $table->foreignId('user_id')->constrained();
+            $table->timestamps();
         });
     }
 
